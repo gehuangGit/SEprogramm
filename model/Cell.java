@@ -78,4 +78,9 @@ public class Cell implements CellInterface{
 	public void setMine() {
 		this.mine = true;
 	}
+	
+	@Override
+	public boolean getFlagStatus(){
+		return flag;
+	}
 }
