@@ -10,13 +10,13 @@ public class MSObservable  {
 	/**
 	 * Liste enthaelt alle angemeldeten Observer.
 	 */
-	private List<MSObserver> subscribers = new ArrayList<MSObserver>();
+	private List<IMSObserver> subscribers = new ArrayList<IMSObserver>();
 
 	/**
 	 * Fuegt einen Observer zur Liste der Observer hinzu.
 	 * @param s Der Observer, der hinzugefuegt werden soll.
 	 */
-	public void addObserver(MSObserver s) {
+	public void addObserver(IMSObserver s) {
 		subscribers.add(s);
 	}
 
@@ -24,7 +24,7 @@ public class MSObservable  {
 	 * Entfernt einen Observer von der Observer-Liste.
 	 * @param s Der Observer, der entfernt werden soll.
 	 */
-	public void removeObserver(MSObserver s) {
+	public void removeObserver(IMSObserver s) {
 		subscribers.remove(s);
 	}
 
@@ -40,7 +40,7 @@ public class MSObservable  {
 	 * implementierte update()-Methode auf.
 	 */
 	public void notifyObservers() {
-		for ( MSObserver observer : subscribers ) {
+		for ( IMSObserver observer : subscribers ) {
 			observer.update();
 		}
 	}
@@ -49,7 +49,7 @@ public class MSObservable  {
 	 * Gibt die Liste mit allen Observern zurueck.
 	 * @return Liste aller Observer.
 	 */
-	public List<MSObserver> getSubscribers(){
+	public List<IMSObserver> getSubscribers(){
 		return subscribers;
 	}
 }
