@@ -39,6 +39,8 @@ public interface CellInterface {
 	 * remove the flag on the cell.
 	 */
 	void unsetFlag();
+	
+	boolean getFlagStatus();
 
 	/**
 	 * set the flag on the cell.
