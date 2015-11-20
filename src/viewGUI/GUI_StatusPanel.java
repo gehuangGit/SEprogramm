@@ -6,7 +6,7 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import model.Flag;
+import de.htwg.se.minesweeper.model.Flag;
 
 public class GUI_StatusPanel extends JPanel {
 	private static final long serialVersionUID = 8925208068361830249L;

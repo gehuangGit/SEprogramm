@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import controller.MScontrollerInterface;
-import model.Flag;
+import de.htwg.se.minesweeper.model.Flag;
 import observer.IMSObserverWithArguments;
 import observer.MSObservableWithArguments;
 

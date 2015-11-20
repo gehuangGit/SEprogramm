@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 import controller.MScontroller;
 import controller.MScontrollerInterface;
-import model.Flag;
+import de.htwg.se.minesweeper.model.Flag;
 import observer.IMSObserverWithArguments;
 
 @SuppressWarnings("serial")

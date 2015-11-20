@@ -1,4 +1,4 @@
-package model;
+package de.htwg.se.minesweeper.model;
 
 import modelInterface.CellInterface;
 
