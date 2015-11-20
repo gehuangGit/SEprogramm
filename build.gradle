@@ -42,7 +42,7 @@ jar {
 sonarqube {
     properties {
     property "sonar.projectName", "SE2015WS-15-Minesweeper"
-    property "sonar.projectKey", "de.htwg.se.sudoku2"
+    property "sonar.projectKey", "de.htwg.se.minesweeper"
     property "sonar.projectVersion", "2.0"
     property "sonar.binaries", "build/classes"
     property "sonar.java.coveragePlugin", "jacoco"
