@@ -1,4 +1,4 @@
-package src.viewGUI;
+package viewGUI;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -9,10 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import src.controller.MScontroller;
-import src.controller.MScontrollerInterface;
-import src.model.Flag;
-import src.observer.IMSObserverWithArguments;
+import controller.MScontroller;
+import controller.MScontrollerInterface;
+import model.Flag;
+import observer.IMSObserverWithArguments;
 
 @SuppressWarnings("serial")
 public class Gui_Frame extends JFrame implements IMSObserverWithArguments {

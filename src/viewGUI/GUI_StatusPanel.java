@@ -1,4 +1,4 @@
-package src.viewGUI;
+package viewGUI;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,7 +6,7 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import src.model.Flag;
+import model.Flag;
 
 public class GUI_StatusPanel extends JPanel {
 	private static final long serialVersionUID = 8925208068361830249L;

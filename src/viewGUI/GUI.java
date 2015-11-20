@@ -1,6 +1,6 @@
-package src.viewGUI;
+package viewGUI;
 
-import src.controller.MScontroller;
+import controller.MScontroller;
 
 public class GUI {
 	public static void main(String[] args){

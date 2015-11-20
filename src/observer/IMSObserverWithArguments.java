@@ -1,4 +1,4 @@
-package src.observer;
+package observer;
 
 public interface IMSObserverWithArguments {
     void update(Object arg);

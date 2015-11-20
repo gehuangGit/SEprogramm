@@ -1,4 +1,4 @@
-package src.viewGUI;
+package viewGUI;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,10 +12,10 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import src.controller.MScontrollerInterface;
-import src.model.Flag;
-import src.observer.IMSObserverWithArguments;
-import src.observer.MSObservableWithArguments;
+import controller.MScontrollerInterface;
+import model.Flag;
+import observer.IMSObserverWithArguments;
+import observer.MSObservableWithArguments;
 
 @SuppressWarnings("serial")
 public class GUI_GridPanel extends JPanel {

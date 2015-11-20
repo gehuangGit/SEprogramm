@@ -1,4 +1,4 @@
-package src.viewTUI;
+package viewTUI;
 
 /**
  * @author Ge Huang
@@ -7,10 +7,10 @@ package src.viewTUI;
 
 import java.util.Scanner;
 
-import src.controller.MScontroller;
-import src.controller.MScontrollerInterface;
-import src.modelInterface.CellInterface;
-import src.observer.IMSObserver;
+import controller.MScontroller;
+import controller.MScontrollerInterface;
+import modelInterface.CellInterface;
+import observer.IMSObserver;
 
 public class TUI implements IMSObserver {
 
