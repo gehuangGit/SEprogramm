@@ -93,8 +93,6 @@ public class GUI_GridPanel extends JPanel {
 					if (o.equals(MouseEvent.BUTTON1)) {
 						spalte = posX;
 						zeile = posY;
-						// System.out.println("left" + zeile + " : " + spalte);
-
 						mouseButton1Clicked();
 					} else if (o.equals(MouseEvent.BUTTON3)) {
 						spalte = posX;
@@ -107,7 +105,7 @@ public class GUI_GridPanel extends JPanel {
 			});
 		}
 
-		@SuppressWarnings("static-access")
+		@SuppressWarnings({ "static-access", "unused" })
 		private void mouseButton1Clicked() {
 
 			if (!c.getCellList()[spalte][zeile].getFlagStatus()) {
@@ -115,9 +113,6 @@ public class GUI_GridPanel extends JPanel {
 					c.firstClick(posX + 1, posY + 1);
 
 					String text = "" + c.minesAround(posX, posY);
-					if (c.minesAround(posX, posY) == 0) {
-						recusivOpen(posX, posY);
-					}
 					Font font = new Font("Arial", 1, 20);
 					MineButton.this.setForeground(Color.GREEN);
 					MineButton.this.setFont(font);
@@ -131,10 +126,6 @@ public class GUI_GridPanel extends JPanel {
 					MineButton.this.setForeground(Color.BLUE);
 					MineButton.this.setFont(font);
 					MineButton.this.setText(text);
-
-					if (c.minesAround(spalte, zeile) == 0) {
-						recusivOpen(spalte, zeile);
-					}
 
 					// if game lost
 					if (ret == c.PLAYER_LOST) {
@@ -189,95 +180,5 @@ public class GUI_GridPanel extends JPanel {
 			c.getCellList()[posX][posY].unsetFlag();
 		}
 
-		private void recusivOpen(int s, int z) {
-			String text = "";
-			Font font = new Font("Arial", 1, 20);
-			MineButton.this.setForeground(Color.BLUE);
-			if (s - 1 > -1 && z - 1 > -1 && z - 1 < c.getSizeY()
-					&& s - 1 < c.getSizeY()) {
-				MineButton b1 = field[s - 1][z - 1];
-				text = "" + c.minesAround(s - 1, z - 1);
-				if (c.minesAround(s - 1, z - 1) == 0) {
-					recusivOpen(s - 1, z - 1);
-				}
-				b1.setText(text);
-				b1.setFont(font);
-			}
-			if (s - 1 > -1 && z + 1 > -1 && z + 1 < c.getSizeY()
-					&& s - 1 < c.getSizeY()) {
-				MineButton b2 = field[s - 1][z + 1];
-				text = "" + c.minesAround(s - 1, z + 1);
-				if (c.minesAround(s - 1, z + 1) == 0) {
-					recusivOpen(s - 1, z + 1);
-				}
-				// Ok
-				b2.setText(text);
-				b2.setFont(font);
-			}
-
-			if (s + 1 > -1 && z + 1 > -1 && s + 1 < c.getSizeX()
-					&& z + 1 < c.getSizeY()) {
-				MineButton b3 = field[s + 1][z + 1];
-				text = "" + c.minesAround(s + 1, z + 1);
-				if (c.minesAround(s + 1, z + 1) == 0) {
-					// recusivOpen(s+1, z+1);
-				}
-				b3.setText(text);
-				b3.setFont(font);
-
-			}
-			if (s > -1 && z + 1 > -1 && z + 1 < c.getSizeY()
-					&& s < c.getSizeY()) {
-				MineButton b4 = field[s][z + 1];
-				text = "" + c.minesAround(s, z + 1);
-				if (c.minesAround(s, z + 1) == 0) {
-					recusivOpen(s, z + 1);
-				}
-				// Ok
-				b4.setText(text);
-				b4.setFont(font);
-			}
-			if (s > -1 && z - 1 > -1 && z - 1 < c.getSizeY()
-					&& s < c.getSizeY()) {
-				MineButton b5 = field[s][z - 1];
-				text = "" + c.minesAround(s, z - 1);
-				if (c.minesAround(s, z - 1) == 0) {
-					// recusivOpen(s, z-1);
-				}
-				b5.setText(text);
-				b5.setFont(font);
-			}
-			if (s - 1 > -1 && z > -1 && z < c.getSizeY()
-					&& s - 1 < c.getSizeY()) {
-				MineButton b6 = field[s - 1][z];
-				text = "" + c.minesAround(s - 1, z);
-				if (c.minesAround(s - 1, z) == 0) {
-					recusivOpen(s - 1, z);
-				}
-				// OK
-				b6.setText(text);
-				b6.setFont(font);
-			}
-			if (s + 1 > -1 && z > -1 && s + 1 < c.getSizeX()
-					&& z < c.getSizeY()) {
-				MineButton b7 = field[s + 1][z];
-				text = "" + c.minesAround(s + 1, z);
-				if (c.minesAround(s + 1, z) == 0) {
-					// recusivOpen(s+1, z);
-				}
-				b7.setText(text);
-				b7.setFont(font);
-			}
-			if (s + 1 > -1 && z - 1 > -1 && s + 1 < c.getSizeX()
-					&& z - 1 < c.getSizeY()) {
-				MineButton b8 = field[s + 1][z - 1];
-				text = "" + c.minesAround(s + 1, z - 1);
-				if (c.minesAround(s + 1, z - 1) == 0) {
-					// recusivOpen(s+1, z-1);
-				}
-				b8.setText(text);
-				b8.setFont(font);
-			}
-		}
 	}
 }
