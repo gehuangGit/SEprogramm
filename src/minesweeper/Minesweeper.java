@@ -1,8 +1,8 @@
 package minesweeper;
 
-import controller.MScontroller;
+import de.htwg.se.minesweeper.controller.MScontroller;
+import de.htwg.se.minesweeper.viewTUI.TUI;
 import viewGUI.Gui_Frame;
-import viewTUI.TUI;
 
 public class Minesweeper {
 	public static void main(String[] args){

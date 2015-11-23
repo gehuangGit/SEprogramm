@@ -1,5 +1,5 @@
 package de.htwg.se.minesweeper.model;
-import modelInterface.GridInterface;
+import de.htwg.se.minesweeper.modelInterface.GridInterface;
 
 /**
  * @author: gehuang

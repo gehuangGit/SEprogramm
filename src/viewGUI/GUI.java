@@ -1,6 +1,6 @@
 package viewGUI;
 
-import controller.MScontroller;
+import de.htwg.se.minesweeper.controller.MScontroller;
 
 public class GUI {
 	public static void main(String[] args){

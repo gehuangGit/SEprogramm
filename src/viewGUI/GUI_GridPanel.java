@@ -12,12 +12,12 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import controller.MScontrollerInterface;
+import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.model.Flag;
-import modelInterface.CellInterface;
-import modelInterface.GridInterface;
-import observer.IMSObserverWithArguments;
-import observer.MSObservableWithArguments;
+import de.htwg.se.minesweeper.modelInterface.CellInterface;
+import de.htwg.se.minesweeper.modelInterface.GridInterface;
+import de.htwg.se.minesweeper.observer.IMSObserverWithArguments;
+import de.htwg.se.minesweeper.observer.MSObservableWithArguments;
 
 @SuppressWarnings("serial")
 public class GUI_GridPanel extends JPanel {
