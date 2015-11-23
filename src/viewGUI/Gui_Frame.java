@@ -45,8 +45,6 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 
 		container.setLayout(null);
 		this.mci = m;
-		//mci = new MScontroller();
-
 		/**
 		 * statusPanel hier
 		 */
@@ -94,17 +92,11 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		@SuppressWarnings("static-access")
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			mci.setUpGrid("Easy");
 			gameField.removeAll();
-			
-			//mci = new MScontroller();
-			//mci.restartE();
 			ms = new GUI_GridPanel(mci, mci.SIZE_X_EASY, mci.SIZE_Y_EASY);
 			ms.addIncrementObserver(Gui_Frame.this);
-
 			gameField.add(ms);
-
-			mci.setUpGrid("Easy");
-			
 			setVisible(true);
 		}
 	}
@@ -115,16 +107,11 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			gameField.removeAll();
-			
-			mci = new MScontroller();
-			
+			mci.setUpGrid("Normal");
 			mm = new GUI_GridPanel(mci, mci.SIZE_X_NORMAL, mci.SIZE_Y_NORMAL);
 			mm.addIncrementObserver(Gui_Frame.this);
 			gameField.add(mm);
-
-			mci.setUpGrid("Normal");
 			mm.repaint();
-			
 			setVisible(true);
 		}
 	}
@@ -135,22 +122,16 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			gameField.removeAll();
-			
-			mci = new MScontroller();
-			
+			mci.setUpGrid("Hard");
 			mx = new GUI_GridPanel(mci, mci.SIZE_X_HARD, mci.SIZE_Y_HARD);
 			mx.addIncrementObserver(Gui_Frame.this);
 			gameField.add(mx);
-
-			mci.setUpGrid("Hard");
 			mx.repaint();
-			
 			setVisible(true);
 		}
 	}
 
 	class NewGame implements ActionListener {
-
 		@Override
 		public void actionPerformed(ActionEvent e) {
 

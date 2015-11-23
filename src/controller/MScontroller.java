@@ -303,8 +303,10 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 	public boolean getGridSetUp() {
 		return this.gridSetUp;
 	}
-	
-	//@Inject
 
+	@Override
+	public GridInterface getGrid() {
+		return grid;
+	}
 	
 }

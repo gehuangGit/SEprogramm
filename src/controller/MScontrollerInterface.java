@@ -1,6 +1,7 @@
 package controller;
 
 import modelInterface.CellInterface;
+import modelInterface.GridInterface;
 import observer.IMSObserver;
 
 public interface MScontrollerInterface {
@@ -192,6 +193,8 @@ public interface MScontrollerInterface {
 	boolean getFirstClickDoneStatus();
 	
 	boolean getGridSetUp();
+
+	GridInterface getGrid();
 }
 
 

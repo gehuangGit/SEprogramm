@@ -14,6 +14,8 @@ import javax.swing.JPanel;
 
 import controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.model.Flag;
+import modelInterface.CellInterface;
+import modelInterface.GridInterface;
 import observer.IMSObserverWithArguments;
 import observer.MSObservableWithArguments;
 
@@ -97,12 +99,19 @@ public class GUI_GridPanel extends JPanel {
 					} else if (o.equals(MouseEvent.BUTTON3)) {
 						spalte = posX;
 						zeile = posY;
-						// System.out.println("right" + zeile + " : " + spalte);
 						mouseButton3Clicked();
 					}
 				}
 
 			});
+		}
+
+		public void setField(int row, int column) {
+			MineButton b = field[row][column];
+			String text = "" + c.minesAround(row, column);
+			b.setText(text);
+			b.setFont(font);
+
 		}
 
 		@SuppressWarnings({ "static-access", "unused" })
@@ -138,25 +147,22 @@ public class GUI_GridPanel extends JPanel {
 								}
 							}
 						}
-						JOptionPane.showMessageDialog(null,
-								"You lose the game",
-								"Infomation", JOptionPane.WARNING_MESSAGE);
+						JOptionPane.showMessageDialog(null, "You lose the game", "Infomation",
+								JOptionPane.WARNING_MESSAGE);
 
 						System.exit(0);
 					}
 					// if game win
 					if (ret == c.PLAYER_WON) {
-						String eingabe = JOptionPane.showInputDialog(null,
-								"You win the game, your name please:",
-								"Congratulation",
-								JOptionPane.PLAIN_MESSAGE);
+						String eingabe = JOptionPane.showInputDialog(null, "You win the game, your name please:",
+								"Congratulation", JOptionPane.PLAIN_MESSAGE);
 
 						System.exit(0);
 					}
 
 				}
 			}
-
+			drawField();
 		}
 
 		private void mouseButton3Clicked() {
@@ -164,7 +170,6 @@ public class GUI_GridPanel extends JPanel {
 			if (!c.getCellList()[spalte][zeile].getFlagStatus()) {
 				MineButton.this.setIcon(flag);
 				MineButton.this.repaint();
-				// c.getCellList()[spalte][zeile].setFlag();
 				c.flagTesting(c.getCellList()[spalte][zeile], true, false);
 				incrementObservable.notifyObservers(Flag.INCREMENT);
 			} else {
@@ -178,6 +183,19 @@ public class GUI_GridPanel extends JPanel {
 			MineButton.this.setIcon(null);
 			MineButton.this.repaint();
 			c.getCellList()[posX][posY].unsetFlag();
+		}
+
+		private void drawField() {
+			GridInterface grid = control.getGrid();
+			CellInterface[][] cellList = grid.getCellList();
+
+			for (int x = 0; x < grid.getSizeX(); ++x) {
+				for (int y = 0; y < grid.getSizeY(); ++y) {
+					if (!cellList[x][y].isClosed()) {
+						setField(x, y);
+					}
+				}
+			}
 		}
 
 	}
