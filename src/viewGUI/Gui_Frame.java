@@ -9,10 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import controller.MScontroller;
-import controller.MScontrollerInterface;
+import de.htwg.se.minesweeper.controller.MScontroller;
+import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.model.Flag;
-import observer.IMSObserverWithArguments;
+import de.htwg.se.minesweeper.observer.IMSObserverWithArguments;
 
 @SuppressWarnings("serial")
 public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
@@ -92,8 +92,9 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		@SuppressWarnings("static-access")
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			mci.setUpGrid("Easy");
+			
 			gameField.removeAll();
+			mci.setUpGrid("Easy");
 			ms = new GUI_GridPanel(mci, mci.SIZE_X_EASY, mci.SIZE_Y_EASY);
 			ms.addIncrementObserver(Gui_Frame.this);
 			gameField.add(ms);
