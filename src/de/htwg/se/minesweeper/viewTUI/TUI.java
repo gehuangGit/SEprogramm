@@ -16,9 +16,7 @@ public class TUI implements IMSObserver {
 
 	private MScontrollerInterface mc;
 	private String eingabe = "Eingabe: ";
-	//private boolean flag = false;
-	//private boolean unflag = false;
-
+	
 	// constructor
 	public TUI(MScontrollerInterface mc) {
 		this.mc = mc;
@@ -115,7 +113,7 @@ public class TUI implements IMSObserver {
 */
 	}
 
-	private static String title() {
+	public static String title() {
 		return ("****************************************\n"
 				+ "*                                         *\n"
 				+ "*     Welcome to Minesweeper TUI game!    *\n"
