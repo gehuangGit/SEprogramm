@@ -44,6 +44,12 @@ public class Grid implements GridInterface {
 	public int getSizeY(){
 		return this.sizeY;
 	}
+
+	@Override
+	public GridInterface getGrid() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
