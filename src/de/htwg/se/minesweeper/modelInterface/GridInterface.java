@@ -11,7 +11,7 @@ public interface GridInterface {
 	 * @return Das 2-dimensionale Array, das das Feld enthaelt.
 	 */
 	CellInterface[][] getCellList();
-
+	GridInterface getGrid();
 	/**
 	 * @return Groesse in X-Richtung.
 	 */
