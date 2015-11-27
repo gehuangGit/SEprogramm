@@ -47,7 +47,6 @@ public class Grid implements GridInterface {
 
 	@Override
 	public GridInterface getGrid() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
