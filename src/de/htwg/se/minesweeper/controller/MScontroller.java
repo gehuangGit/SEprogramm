@@ -45,13 +45,15 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 
 	@Override
 	public void setUpGrid(String s) {
-		if (s.equals("Easy")) {
+		
+		//if (s.equals("Easy"))
+		if ("Easy".equals(s)) {
 			grid = new Grid(SIZE_X_EASY, SIZE_Y_EASY,
 					MINES_EASY);
-		} else if (s.equals("Normal")) {
+		} else if ("Normal".equals(s)) {
 			grid = new Grid(SIZE_X_NORMAL,
 					SIZE_Y_NORMAL, MINES_NORMAL);
-		} else if (s.equals("Hard")) {
+		} else if ("Hard".equals(s)) {
 			grid = new Grid(SIZE_X_HARD, SIZE_Y_HARD, MINES_HARD);
 		}
 		
