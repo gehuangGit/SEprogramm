@@ -39,6 +39,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 	public void setUpGrid(int sizeX, int sizeY, int mines) {
 		grid = new Grid(sizeX, sizeY, mines);
 		gridSetUp = true;
+		firstClickDone = false;
 		notifyObservers();
 	}
 
@@ -53,7 +54,9 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 		} else if (s.equals("Hard")) {
 			grid = new Grid(SIZE_X_HARD, SIZE_Y_HARD, MINES_HARD);
 		}
+		
 		gridSetUp = true;
+		firstClickDone = false;
 		notifyObservers();
 		
 	}
