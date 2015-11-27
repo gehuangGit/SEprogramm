@@ -83,11 +83,6 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		this.setVisible(true);
 	}
 
-	public static void main(String[] args) {
-		MScontroller m = new MScontroller();
-		new Gui_Frame(m);
-	}
-
 	class NewEasyGame implements ActionListener {
 		@SuppressWarnings("static-access")
 		@Override
