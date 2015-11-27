@@ -107,10 +107,10 @@ public class GUI_GridPanel extends JPanel {
 		}
 
 		public void setField(int row, int column) {
-			MineButton b = field[row][column];
+			MineButton b1 = field[row][column];
 			String text = "" + c.minesAround(row, column);
-			b.setText(text);
-			b.setFont(font);
+			b1.setText(text);
+			b1.setFont(font);
 
 		}
 
@@ -156,10 +156,8 @@ public class GUI_GridPanel extends JPanel {
 					if (ret == c.PLAYER_WON) {
 						String eingabe = JOptionPane.showInputDialog(null, "You win the game, your name please:",
 								"Congratulation", JOptionPane.PLAIN_MESSAGE);
-
 						System.exit(0);
 					}
-
 				}
 			}
 			drawField();
