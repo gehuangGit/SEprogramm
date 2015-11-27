@@ -79,7 +79,6 @@ public class GUI_GridPanel extends JPanel {
 
 		private static final int FONTSIZE = 10;
 		private Font font = new Font("Dialog", Font.BOLD, FONTSIZE);
-		//Z:\git\SEprogramm\src\de\htwg\se\minesweeper\viewGUI
 		private Icon flag = new ImageIcon("Z:/git/SEprogramm/src/de/htwg/se/minesweeper/viewGUI/flag.png");
 		private Icon mine = new ImageIcon("Z:/git/SEprogramm/src/de/htwg/se/minesweeper/viewGUI/mine.jpg");
 
