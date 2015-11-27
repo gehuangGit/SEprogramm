@@ -150,13 +150,13 @@ public class GUI_GridPanel extends JPanel {
 						JOptionPane.showMessageDialog(null, "You lose the game", "Infomation",
 								JOptionPane.WARNING_MESSAGE);
 
-						System.exit(0);
+					//	System.exit(0);
 					}
 					// if game win
 					if (ret == c.PLAYER_WON) {
 						String eingabe = JOptionPane.showInputDialog(null, "You win the game, your name please:",
 								"Congratulation", JOptionPane.PLAIN_MESSAGE);
-						System.exit(0);
+					//	System.exit(0);
 					}
 				}
 			}
