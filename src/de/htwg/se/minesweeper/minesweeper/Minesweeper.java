@@ -31,8 +31,6 @@ public class Minesweeper {
 	public static void main(String[] args) throws InstantiationException {
 		
 		Minesweeper ms = Minesweeper.getInstance();
-		
-		//MScontroller m = new MScontroller();
 		MScontroller m = ms.getControl();
 		
 		new Gui_Frame(m);

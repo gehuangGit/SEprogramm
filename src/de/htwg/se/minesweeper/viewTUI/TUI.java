@@ -19,7 +19,8 @@ public class TUI implements IMSObserver {
 
 	private MScontrollerInterface mc;
 	
-	private Logger logger = Logger.getLogger("de.htwg.se.minesweeper.viewTUI.TUI");
+	private Logger logger;
+	//= Logger.getLogger("de.htwg.se.minesweeper.viewTUI.TUI");
 	private String newLine = System.getProperty("line.separator");
 	private String eingabe = "Eingabe: ";
 	
@@ -32,7 +33,6 @@ public class TUI implements IMSObserver {
 
 	// main method
 	public static void main(String[] args) {
-		PropertyConfigurator.configure(ClassLoader.getSystemResource("log4j.properties"));
 		MScontroller mcr = new MScontroller();
 		TUI t = new TUI(mcr);
 		t.playTUI();
