@@ -9,6 +9,10 @@ import com.google.inject.Injector;
 
 public class Minesweeper {
 	
+	private Injector injectior;
+	
+	
+	
 	public static void main(String[] args) throws InstantiationException {
 		MScontroller m = new MScontroller();
 		new Gui_Frame(m);
