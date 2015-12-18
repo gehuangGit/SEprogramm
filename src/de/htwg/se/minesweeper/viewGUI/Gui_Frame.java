@@ -9,7 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import de.htwg.se.minesweeper.controller.MScontroller;
+import com.google.inject.Inject;
+
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.model.Flag;
 import de.htwg.se.minesweeper.observer.IMSObserverWithArguments;
@@ -33,6 +34,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 
 	private GUI_StatusPanel statusPanel;
 
+	@Inject
 	public Gui_Frame(MScontrollerInterface m) {
 
 		container = this.getContentPane();

@@ -7,6 +7,8 @@ package de.htwg.se.minesweeper.viewTUI;
 
 import java.util.Scanner;
 
+import com.google.inject.Inject;
+
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.modelInterface.CellInterface;
@@ -18,6 +20,7 @@ public class TUI implements IMSObserver {
 	private String eingabe = "Eingabe: ";
 	
 	// constructor
+	@Inject
 	public TUI(MScontrollerInterface mc) {
 		this.mc = mc;
 		mc.addObserver(this);
