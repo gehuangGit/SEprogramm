@@ -29,18 +29,19 @@ public class Grid implements GridInterface {
 		}
 	}
 	
+	@Override
 	public int getMines(){
 		return mines;
 	}
-	
+	@Override
 	public Cell[][] getCellList(){
 		return cellList;
 	}
-	
+	@Override
 	public int getSizeX(){
 		return this.sizeX;
 	}
-	
+	@Override
 	public int getSizeY(){
 		return this.sizeY;
 	}
