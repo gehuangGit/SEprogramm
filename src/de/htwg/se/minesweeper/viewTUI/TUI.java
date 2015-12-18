@@ -7,8 +7,10 @@ package de.htwg.se.minesweeper.viewTUI;
 
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.google.inject.Inject;
-import com.sun.istack.internal.logging.Logger;
 
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
@@ -19,7 +21,7 @@ public class TUI implements IMSObserver {
 
 	private MScontrollerInterface mc;
 	
-	private Logger logger = Logger.getLogger(de.htwg.se.minesweeper.viewTUI.TUI.class);
+	private Logger logger = LogManager.getLogger(TUI.class.getName());
 	private String newLine = System.getProperty("line.separator");
 	private String eingabe = "Eingabe: ";
 	
@@ -43,25 +45,16 @@ public class TUI implements IMSObserver {
 	 */
 	public void playTUI() {
 		// define the initial elements
-		//System.out.println(title());
 		logger.info(newLine + title());
 		
-		//System.out.println("sizeX:");
 		logger.info(newLine + "sizeX: ");
 		int sizeX = readPositiveInt();
-		//System.out.println(eingabe + sizeX);
 		logger.info(newLine + eingabe + sizeX);
 		
-		
-		
-		//System.out.println("sizeY:");
 		logger.info(newLine + "sizeY: ");
 		int sizeY = readPositiveInt();
-		//System.out.println(eingabe + sizeY);
 		logger.info(newLine + eingabe + sizeY);
 		
-		//System.out.println("mines (max. " + (int) sizeX * sizeY
-		//		/ MScontrollerInterface.AMOUNT_OF_MINES + "): ");
 		logger.info(newLine + "mines (max. " + (int) sizeX * sizeY
 					/ MScontrollerInterface.AMOUNT_OF_MINES + "): "); 
 		
@@ -74,31 +67,24 @@ public class TUI implements IMSObserver {
 			//printTUI();
 			logger.info(newLine + printTUI());
 			
-			//System.out.println("X-Koordinate: ");
 			logger.info(newLine + "X-Koordinate: ");
 			int xCoord = readPositiveInt();
-			//System.out.println(eingabe + xCoord);
 			logger.info(newLine + eingabe + xCoord);
 
-			//System.out.println("Y-Koordinate: ");
 			logger.info(newLine + "Y-Koordinate: ");
 			int yCoord = readPositiveInt();
-			//System.out.println(eingabe + yCoord);
 			logger.info(newLine + eingabe + yCoord);
 			
 			int firstClick = mc.firstClick(yCoord, xCoord);
 			if (firstClick == -1) {
-				//System.out.println("Out of Bounds!");
 				logger.info(newLine + "Out of Bounds!");
 				return;
 			}
 			if (firstClick == 2) {
-				//System.out.println("Gewonnen!");
 				logger.info(newLine + "Gewonnen!");
 				return;
 			}
 		} else {
-			//System.out.println("Falsche Werte!");
 			logger.info(newLine + "Falsche Werte!");
 		}
 

@@ -9,7 +9,7 @@
             <Root level="error">
                 <AppenderRef ref="Console" />
             </Root>
-            <logger name="de.htwg.sudoku.aview" level="TRACE" />
+            <logger name="de.htwg.se.minesweeper.viewTUI.TUI" level="TRACE" />
             <Root level="ERROR">
                    <AppenderRef ref="CONSOLE"/>
             </Root>
