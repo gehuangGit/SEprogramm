@@ -126,11 +126,9 @@ public class TUI implements IMSObserver {
 	}
 
 	public static String title() {
-		return ("****************************************\n"
-				+ "*                                         *\n"
+		return ( "*                                         *\n"
 				+ "*     Welcome to Minesweeper TUI game!    *\n"
-				+ "*                                         *\n"
-				+ "*****************************************");
+				+ "*                                         *\n");
 	}
 
 	/**
