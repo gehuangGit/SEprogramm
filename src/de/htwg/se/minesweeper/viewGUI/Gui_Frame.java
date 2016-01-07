@@ -132,7 +132,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 	class NewGame implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-
+			// just implements the method of ActionListener
 		}
 	}
 
