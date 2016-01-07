@@ -70,7 +70,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 				&& yCoord <= grid.getSizeY()) {
 			double y = 0.0;
 			double x = 0.0;
-			y = (double) (yCoord - 1) / MAGIC_NUMBER_TEN;
+			y = (yCoord - 1) / MAGIC_NUMBER_TEN;
 			x = xCoord - 1;
 			//coords.add(((xCoord - 1) + ((double) (yCoord - 1) / MAGIC_NUMBER_TEN)));
 			coords.add(x + y);
@@ -86,7 +86,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 						+ ((double) mineY / MAGIC_NUMBER_TEN)));
 				
 				double my = 0.0;
-				my = (double) mineY / MAGIC_NUMBER_TEN;
+				my = mineY / MAGIC_NUMBER_TEN;
 				//coords.add((mineX + ((double) mineY / MAGIC_NUMBER_TEN)));
 				coords.add(mineX + my);
 				grid.getCellList()[mineX][mineY].setMine();
