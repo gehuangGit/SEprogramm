@@ -9,9 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+import de.htwg.se.minesweeper.ModelInterface.CellInterface;
+import de.htwg.se.minesweeper.ModelInterface.GridInterface;
 import de.htwg.se.minesweeper.model.Grid;
-import de.htwg.se.minesweeper.modelInterface.CellInterface;
-import de.htwg.se.minesweeper.modelInterface.GridInterface;
 import de.htwg.se.minesweeper.observer.MSObservable;
 
 

@@ -1,4 +1,4 @@
-package de.htwg.se.minesweeper.modelInterface;
+package de.htwg.se.minesweeper.ModelInterface;
 
 
 /**

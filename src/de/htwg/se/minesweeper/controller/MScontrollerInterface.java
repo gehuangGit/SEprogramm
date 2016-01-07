@@ -1,7 +1,7 @@
 package de.htwg.se.minesweeper.controller;
 
-import de.htwg.se.minesweeper.modelInterface.CellInterface;
-import de.htwg.se.minesweeper.modelInterface.GridInterface;
+import de.htwg.se.minesweeper.ModelInterface.CellInterface;
+import de.htwg.se.minesweeper.ModelInterface.GridInterface;
 import de.htwg.se.minesweeper.observer.IMSObserver;
 
 public interface MScontrollerInterface {
