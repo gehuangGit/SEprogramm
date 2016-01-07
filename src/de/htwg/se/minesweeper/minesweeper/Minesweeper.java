@@ -36,9 +36,6 @@ public class Minesweeper {
 		new Gui_Frame(m);
 		TUI t = new TUI(m);
 		t.playTUI();
-		
-		
-		
 	}
 
 	public MScontroller getControl(){
