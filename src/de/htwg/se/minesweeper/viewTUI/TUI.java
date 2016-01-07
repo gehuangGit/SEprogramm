@@ -64,7 +64,6 @@ public class TUI implements IMSObserver {
 		if (mc.initialCheck(sizeX, sizeY, mines)) {
 			mc.setUpGrid(sizeX, sizeY, mines);
 			
-			//printTUI();
 			logger.info(newLine + printTUI());
 			
 			logger.info(newLine + "X-Koordinate: ");
@@ -166,15 +165,16 @@ public class TUI implements IMSObserver {
 		return -1;
 	}
 
+	/**
 	@SuppressWarnings("unused")
 	private String read() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		String number = sc.next();
-		System.out.println(number);
+		logger.info(number);
 		return number;
 	}
-
+*/
 	/**
 	 * printTUI() paint the TUI status
 	 * @return a list of strings.
@@ -232,7 +232,7 @@ public class TUI implements IMSObserver {
 
 	@Override
 	public void update() {
-		System.out.println(printTUI());
+		logger.info(printTUI());
 
 	}
 
