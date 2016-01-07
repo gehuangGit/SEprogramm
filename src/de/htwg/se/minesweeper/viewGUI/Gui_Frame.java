@@ -29,7 +29,6 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 	private Gui_GridPanel mm;
 	private Gui_GridPanel mx;
 
-	// private MScontroller mci;
 	private MScontrollerInterface mci;
 
 	private Gui_StatusPanel statusPanel;
