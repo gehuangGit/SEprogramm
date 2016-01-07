@@ -55,7 +55,8 @@ public class TUI implements IMSObserver {
 		int sizeY = readPositiveInt();
 		logger.info(newLine + eingabe + sizeY);
 		
-		logger.info(newLine + "mines (max. " + (int) sizeX * sizeY
+		// remove (int)
+		logger.info(newLine + "mines (max. " + sizeX * sizeY
 					/ MScontrollerInterface.AMOUNT_OF_MINES + "): "); 
 		
 		int mines = readNumberOfMines();
