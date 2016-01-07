@@ -122,18 +122,18 @@ public class Gui_GridPanel extends JPanel {
 					c.firstClick(posX + 1, posY + 1);
 
 					String text = "" + c.minesAround(posX, posY);
-					Font font = new Font("Arial", 1, 20);
+					Font font1 = new Font("Arial", 1, 20);
 					MineButton.this.setForeground(Color.GREEN);
-					MineButton.this.setFont(font);
+					MineButton.this.setFont(font1);
 					MineButton.this.setText(text);
 
 					c.setFirstClickDone();
 				} else {
 					int ret = c.click(posX + 1, posY + 1, false, false);
 					String text = "" + c.minesAround(posX, posY);
-					Font font = new Font("Arial", 1, 20);
+					Font font2 = new Font("Arial", 1, 20);
 					MineButton.this.setForeground(Color.BLUE);
-					MineButton.this.setFont(font);
+					MineButton.this.setFont(font2);
 					MineButton.this.setText(text);
 
 					// if game lost
