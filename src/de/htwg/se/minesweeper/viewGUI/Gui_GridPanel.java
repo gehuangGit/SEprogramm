@@ -20,14 +20,14 @@ import de.htwg.se.minesweeper.observer.IMSObserverWithArguments;
 import de.htwg.se.minesweeper.observer.MSObservableWithArguments;
 
 @SuppressWarnings("serial")
-public class GUI_GridPanel extends JPanel {
+public class Gui_GridPanel extends JPanel {
 
 	private boolean fieldbuild = false;
 	private MineButton[][] field;
 	private MScontrollerInterface control;
 	private MSObservableWithArguments incrementObservable;
 
-	public GUI_GridPanel(MScontrollerInterface c, int x, int y) {
+	public Gui_GridPanel(MScontrollerInterface c, int x, int y) {
 		control = c;
 		this.setLayout(null);
 		this.setBounds(0, 80, 600, 520);
@@ -138,7 +138,7 @@ public class GUI_GridPanel extends JPanel {
 
 					// if game lost
 					if (ret == c.PLAYER_LOST) {
-						GUI_GridPanel.this.unsetFieldBuild();
+						Gui_GridPanel.this.unsetFieldBuild();
 						for (int i = 0; i < control.getSizeY(); i++) {
 							for (int j = 0; j < control.getSizeX(); j++) {
 								field[j][i].setEnabled(false);

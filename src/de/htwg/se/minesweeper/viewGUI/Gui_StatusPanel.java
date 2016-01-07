@@ -8,13 +8,13 @@ import javax.swing.JPanel;
 
 import de.htwg.se.minesweeper.model.Flag;
 
-public class GUI_StatusPanel extends JPanel {
+public class Gui_StatusPanel extends JPanel {
 	private static final long serialVersionUID = 8925208068361830249L;
 	private final JLabel lf = new JLabel("flag: ");
 	private final JLabel num = new JLabel();
 	private int a = 0;
 
-	public GUI_StatusPanel() {
+	public Gui_StatusPanel() {
 		setLayout(null);
 
 		Font font = new Font("Arial", 1, 20);

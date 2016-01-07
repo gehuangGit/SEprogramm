@@ -25,14 +25,14 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 	private JButton buttonEasy;
 	private JButton buttonNormal;
 	private JButton buttonHard;
-	private GUI_GridPanel ms;
-	private GUI_GridPanel mm;
-	private GUI_GridPanel mx;
+	private Gui_GridPanel ms;
+	private Gui_GridPanel mm;
+	private Gui_GridPanel mx;
 
 	// private MScontroller mci;
 	private MScontrollerInterface mci;
 
-	private GUI_StatusPanel statusPanel;
+	private Gui_StatusPanel statusPanel;
 
 	@Inject
 	public Gui_Frame(MScontrollerInterface m) {
@@ -51,7 +51,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		 * statusPanel hier
 		 */
 
-		statusPanel = new GUI_StatusPanel();
+		statusPanel = new Gui_StatusPanel();
 
 		container.add(statusPanel);
 		container.add(statusPanel);
@@ -92,7 +92,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 			
 			gameField.removeAll();
 			mci.setUpGrid("Easy");
-			ms = new GUI_GridPanel(mci, mci.SIZE_X_EASY, mci.SIZE_Y_EASY);
+			ms = new Gui_GridPanel(mci, mci.SIZE_X_EASY, mci.SIZE_Y_EASY);
 			ms.addIncrementObserver(Gui_Frame.this);
 			gameField.add(ms);
 			setVisible(true);
@@ -106,7 +106,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		public void actionPerformed(ActionEvent e) {
 			gameField.removeAll();
 			mci.setUpGrid("Normal");
-			mm = new GUI_GridPanel(mci, mci.SIZE_X_NORMAL, mci.SIZE_Y_NORMAL);
+			mm = new Gui_GridPanel(mci, mci.SIZE_X_NORMAL, mci.SIZE_Y_NORMAL);
 			mm.addIncrementObserver(Gui_Frame.this);
 			gameField.add(mm);
 			mm.repaint();
@@ -121,7 +121,7 @@ public class Gui_Frame extends JFrame implements IMSObserverWithArguments {
 		public void actionPerformed(ActionEvent e) {
 			gameField.removeAll();
 			mci.setUpGrid("Hard");
-			mx = new GUI_GridPanel(mci, mci.SIZE_X_HARD, mci.SIZE_Y_HARD);
+			mx = new Gui_GridPanel(mci, mci.SIZE_X_HARD, mci.SIZE_Y_HARD);
 			mx.addIncrementObserver(Gui_Frame.this);
 			gameField.add(mx);
 			mx.repaint();
