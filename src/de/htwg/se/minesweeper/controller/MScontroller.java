@@ -64,7 +64,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 
 	@Override
 	public int firstClick(int xCoord, int yCoord) {
-		LinkedList<Double> coords = new LinkedList<Double>();
+		List<Double> coords = new LinkedList<Double>();
 
 		if (xCoord > 0 && xCoord <= grid.getSizeX() && yCoord > 0
 				&& yCoord <= grid.getSizeY()) {
