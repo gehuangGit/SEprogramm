@@ -22,8 +22,8 @@ import de.htwg.se.minesweeper.observer.MSObservableWithArguments;
 @SuppressWarnings("serial")
 public class Gui_GridPanel extends JPanel {
 
-	public boolean fieldbuild = false;
-	public MineButton[][] field;
+	private boolean fieldbuild = false;
+	private MineButton[][] field;
 	private MScontrollerInterface control;
 	private MSObservableWithArguments incrementObservable;
 

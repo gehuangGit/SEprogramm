@@ -11,12 +11,6 @@ public class Gui_GridPanelTest {
 	MScontrollerInterface ms = new MScontroller();
 	Gui_GridPanel gp = new Gui_GridPanel(ms, 5, 5);
 	
-	@Test
-	public void testgetMineButtonFiled(){
-		gp.buildUpMineGameField(5, 5);
-		assertSame(gp.field, gp.getMineButtonFiled());
-		
-	}
 	
 	@Test
 	public void testgetFieldBuild(){
