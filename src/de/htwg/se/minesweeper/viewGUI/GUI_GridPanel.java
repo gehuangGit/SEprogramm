@@ -114,7 +114,7 @@ public class GUI_GridPanel extends JPanel {
 
 		}
 
-		@SuppressWarnings({ "static-access", "unused" })
+		@SuppressWarnings({ "static-access" })
 		private void mouseButton1Clicked() {
 
 			if (!c.getCellList()[spalte][zeile].getFlagStatus()) {
