@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.viewGUI.Gui_Frame;
 import de.htwg.se.minesweeper.viewTUI.TUI;
 
@@ -16,6 +17,7 @@ public class MinesweeperTest {
 	public void testGetInstance() {
 		Minesweeper mine = m.getInstance();
 		assertNotNull(mine);
+		assertSame(m, mine);
 	}
 
 	@Test
@@ -28,5 +30,11 @@ public class MinesweeperTest {
 	public void testGetTui() {
 		TUI tui = m.getTui();
 		assertNotNull(tui);
+	}
+	
+	@Test
+	public void testGetControl(){
+		MScontroller controll = m.getControl();
+		assertNotNull(controll);
 	}
 }
