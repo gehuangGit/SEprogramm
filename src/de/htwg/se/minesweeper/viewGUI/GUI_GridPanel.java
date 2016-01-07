@@ -153,7 +153,7 @@ public class GUI_GridPanel extends JPanel {
 					}
 					// if game win
 					if (ret == c.PLAYER_WON) {
-						String eingabe = JOptionPane.showInputDialog(null, "You win the game, your name please:",
+						JOptionPane.showInputDialog(null, "You win the game, your name please:",
 								"Congratulation", JOptionPane.PLAIN_MESSAGE);
 					}
 				}
