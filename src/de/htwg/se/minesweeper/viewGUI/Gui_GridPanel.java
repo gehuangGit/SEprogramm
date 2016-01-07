@@ -22,8 +22,8 @@ import de.htwg.se.minesweeper.observer.MSObservableWithArguments;
 @SuppressWarnings("serial")
 public class Gui_GridPanel extends JPanel {
 
-	private boolean fieldbuild = false;
-	private MineButton[][] field;
+	public boolean fieldbuild = false;
+	public MineButton[][] field;
 	private MScontrollerInterface control;
 	private MSObservableWithArguments incrementObservable;
 
@@ -40,7 +40,7 @@ public class Gui_GridPanel extends JPanel {
 		incrementObservable.addObserver(s);
 	}
 
-	private void buildUpMineGameField(int sizeX, int sizeY) {
+	public void buildUpMineGameField(int sizeX, int sizeY) {
 		field = new MineButton[sizeX][sizeY];
 		for (int i = 0; i < sizeY; i++) {
 			for (int j = 0; j < sizeX; j++) {
