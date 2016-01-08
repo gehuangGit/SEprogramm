@@ -7,11 +7,12 @@ import org.junit.Test;
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.viewgui.Gui_GridPanel;
+import de.htwg.se.minesweeper.viewgui.Gui_GridPanel.MineButton;
 
 public class Gui_GridPanelTest {
 	MScontrollerInterface ms = new MScontroller();
 	Gui_GridPanel gp = new Gui_GridPanel(ms, 5, 5);
-	
+	MineButton mb;
 	
 	@Test
 	public void testgetFieldBuild(){
