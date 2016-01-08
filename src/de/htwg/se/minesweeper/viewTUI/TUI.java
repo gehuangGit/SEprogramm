@@ -12,9 +12,9 @@ import org.apache.logging.log4j.Logger;
 
 import com.google.inject.Inject;
 
-import de.htwg.se.minesweeper.ModelInterface.CellInterface;
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
+import de.htwg.se.minesweeper.modelinterface.CellInterface;
 import de.htwg.se.minesweeper.observer.IMSObserver;
 
 public class TUI implements IMSObserver {

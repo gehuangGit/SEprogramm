@@ -12,10 +12,10 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import de.htwg.se.minesweeper.ModelInterface.CellInterface;
-import de.htwg.se.minesweeper.ModelInterface.GridInterface;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.model.Flag;
+import de.htwg.se.minesweeper.modelinterface.CellInterface;
+import de.htwg.se.minesweeper.modelinterface.GridInterface;
 import de.htwg.se.minesweeper.observer.IMSObserverWithArguments;
 import de.htwg.se.minesweeper.observer.MSObservableWithArguments;
 

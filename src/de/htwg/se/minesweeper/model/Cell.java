@@ -1,6 +1,6 @@
 package de.htwg.se.minesweeper.model;
 
-import de.htwg.se.minesweeper.ModelInterface.CellInterface;
+import de.htwg.se.minesweeper.modelinterface.CellInterface;
 
 
 /**

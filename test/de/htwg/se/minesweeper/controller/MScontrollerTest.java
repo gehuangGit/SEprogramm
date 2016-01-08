@@ -8,9 +8,9 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.htwg.se.minesweeper.ModelInterface.CellInterface;
 import de.htwg.se.minesweeper.model.Cell;
 import de.htwg.se.minesweeper.model.Grid;
+import de.htwg.se.minesweeper.modelinterface.CellInterface;
 
 public class MScontrollerTest {
 
