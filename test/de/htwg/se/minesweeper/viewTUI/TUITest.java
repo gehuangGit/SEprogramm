@@ -9,10 +9,7 @@ public class TUITest {
 	
 	@Test
 	public void testtitle(){
-	assertEquals("*                                         *\n"
-				+ "*     Welcome to Minesweeper TUI game!    *\n"
-				+ "*                                         *\n"
-				, TUI.title());
+		assertTrue(TUI.title().contains("Welcome to Minesweeper TUI game!"));
 	}
 	
 	
