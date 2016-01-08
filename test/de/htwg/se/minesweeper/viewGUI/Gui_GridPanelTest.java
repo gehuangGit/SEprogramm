@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
+import de.htwg.se.minesweeper.viewGUI.Gui_GridPanel;
 
 public class Gui_GridPanelTest {
 	MScontrollerInterface ms = new MScontroller();
