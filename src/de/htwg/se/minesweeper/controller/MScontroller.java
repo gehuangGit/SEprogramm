@@ -32,7 +32,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 	@Override
 	public boolean initialCheck(int sizeX, int sizeY, int mines) {
 		return sizeX != -1 && sizeY != -1 && mines != -1
-				&& mines <= (int) (sizeX * sizeY / AMOUNT_OF_MINES);
+				&& mines <= (sizeX * sizeY / AMOUNT_OF_MINES);
 	}
 
 	@Override
