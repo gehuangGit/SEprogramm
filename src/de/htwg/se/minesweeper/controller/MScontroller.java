@@ -71,7 +71,7 @@ public class MScontroller extends MSObservable implements MScontrollerInterface 
 			double y = 0.0;
 			double x = 0.0;
 			y = (double)(yCoord - 1) / MAGIC_NUMBER_TEN;
-			x = xCoord - 1;
+			x = (double)xCoord - 1;
 			coords.add(x + y);
 			
 			Random rand = new Random();
