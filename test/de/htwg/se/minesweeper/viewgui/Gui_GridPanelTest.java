@@ -1,4 +1,4 @@
-package de.htwg.se.minesweeper.viewGUI;
+package de.htwg.se.minesweeper.viewgui;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
-import de.htwg.se.minesweeper.viewGUI.Gui_GridPanel;
+import de.htwg.se.minesweeper.viewgui.Gui_GridPanel;
 
 public class Gui_GridPanelTest {
 	MScontrollerInterface ms = new MScontroller();

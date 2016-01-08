@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import de.htwg.se.minesweeper.controller.MScontroller;
-import de.htwg.se.minesweeper.viewGUI.Gui_Frame;
 import de.htwg.se.minesweeper.viewTUI.TUI;
+import de.htwg.se.minesweeper.viewgui.Gui_Frame;
 
 public class MinesweeperTest {
 	Minesweeper m = new Minesweeper();

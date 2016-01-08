@@ -1,4 +1,4 @@
-package de.htwg.se.minesweeper.viewGUI;
+package de.htwg.se.minesweeper.viewgui;
 
 import java.awt.Color;
 import java.awt.Font;
