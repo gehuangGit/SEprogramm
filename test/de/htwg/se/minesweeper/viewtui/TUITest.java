@@ -4,10 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import de.htwg.se.minesweeper.controller.MScontroller;
+import de.htwg.se.minesweeper.controller.MScontrollerInterface;
 import de.htwg.se.minesweeper.viewtui.TUI;
 
 public class TUITest {
-	TUI tui;
+	MScontrollerInterface ms = new MScontroller();
+	TUI tui = new TUI(ms);
 	
 	@Test
 	public void testtitle(){
