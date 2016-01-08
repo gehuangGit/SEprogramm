@@ -2,8 +2,8 @@ package de.htwg.se.minesweeper.minesweeper;
 
 import de.htwg.se.minesweeper.controller.MScontroller;
 import de.htwg.se.minesweeper.controller.MScontrollerInterface;
-import de.htwg.se.minesweeper.viewTUI.TUI;
 import de.htwg.se.minesweeper.viewgui.Gui_Frame;
+import de.htwg.se.minesweeper.viewtui.TUI;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

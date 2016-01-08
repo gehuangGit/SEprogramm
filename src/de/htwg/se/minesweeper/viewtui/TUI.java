@@ -1,4 +1,4 @@
-package de.htwg.se.minesweeper.viewTUI;
+package de.htwg.se.minesweeper.viewtui;
 
 /**
  * @author Ge Huang
